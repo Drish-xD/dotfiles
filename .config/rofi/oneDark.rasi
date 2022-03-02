@@ -1,0 +1,169 @@
+
+configuration {
+    font: 							"DaddyTimeMono Nerd Font 12";
+    fixed-num-lines: 				true;
+    show-icons: 					false;
+    sidebar-mode: 					false;
+    scroll-method: 					1;
+    window-format: 					"[{w}] ··· {c} ···   {t}";
+    click-to-exit: 					true;
+    combi-hide-mode-prefix: 		false;
+    display-window: 				"";
+    display-windowcd: 				"";
+    display-run: 					"";
+    display-ssh: 					"";
+    display-drun: 					"";
+    display-combi: 					"";
+}
+
+@import "colors.rasi"
+
+* {
+    background-color:             	@base;
+}
+
+window {
+    border: 						0px;
+    border-color: 					@cyan;
+    border-radius: 					20px;
+    padding: 						30;
+    width: 							40%;
+}
+
+prompt {
+    spacing: 						0;
+    border: 						0;
+    text-color: 					@text;
+}
+
+textbox-prompt-colon {
+    expand: 						false;
+    str: 							" ";
+    margin:							0px 4px 0px 0px;
+    text-color: 					inherit;
+}
+
+entry {
+    spacing:    					0;
+    text-color: 					@text;
+}
+
+case-indicator {
+    spacing:    					0;
+    text-color: 					@text;
+}
+
+inputbar {
+    spacing:    					0px;
+    text-color: 					@text;
+    padding:    					1px;
+    children: 						[ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+mainbox {
+    border: 						0px;
+    border-color: 					@cyan;
+    padding: 						6;
+}
+
+listview {
+    lines:							10;
+    columns:						1;
+    fixed-height: 					0;
+    border: 						0px;
+    border-color: 					@cyan;
+    spacing: 						4px;
+    scrollbar: 						false;
+    padding: 						5px 5px 0px 5px;
+}
+
+element-text, element-icon {
+    background-color: #00000000;
+    text-color:       inherit;
+}
+
+element {
+    border: 						0px;
+    border-radius: 					10px;
+    padding: 						5px;
+}
+element normal.normal {
+    background-color: 				@base;
+    text-color:       				@text;
+}
+element normal.urgent {
+    background-color: 				@base;
+    text-color:       				@red;
+}
+element normal.active {
+    background-color: 				@green;
+    text-color:       				@base;
+}
+element selected.normal {
+    background-color: 				@cyan;
+    text-color:       				@base;
+}
+element selected.urgent {
+    background-color: 				@base;
+    text-color:       				@red;
+}
+element selected.active {
+    background-color: 				@cyan;
+    text-color:       				@base;
+}
+element alternate.normal {
+    background-color: 				@base;
+    text-color:       				@text;
+}
+element alternate.urgent {
+    background-color: 				@base;
+    text-color:       				@text;
+}
+element alternate.active {
+    background-color: 				@base;
+    text-color:       				@text;
+}
+
+sidebar {
+    border:       					0px;
+    border-color: 					@cyan;
+    border-radius: 					0px;
+}
+
+button {
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    background-color:             	@base;
+    margin: 						5px;
+    padding: 						5px;
+    text-color: 					@cyan;
+    border: 						0px;
+    border-radius: 					100%;
+    border-color: 					@text;
+}
+
+button selected {
+    background-color:             	@cyan;
+    text-color: 					@base;
+    border: 						0px;
+    border-radius: 					100%;
+    border-color: 					@text;
+}
+
+scrollbar {
+    width:        					4px;
+    border:       					0px;
+    handle-color: 					@text;
+    handle-width: 					8px;
+    padding:      					0;
+}
+
+message {
+    border: 						0px;
+    border-color: 					@cyan;
+    padding: 						1px;
+}
+
+textbox {
+    text-color: 					@text;
+}

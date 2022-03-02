@@ -1,0 +1,17 @@
+/* colors */
+
+* {
+  empty:    #00000000;
+  base:     #282C34FF;
+  text:     #ABB2BFFF;
+  text-alt: #818896FF;
+  text-alt-2: #5C6370FF;
+  cyan:     #56B6C2FF;
+  blue:     #61AFEEFF;
+  magenta:  #C678DDFF;
+  green:    #98C379FF;
+  red:      #E06C75FF;
+  darkred:  #BE5046FF;
+  orange:   #E5C07BFF;
+  darkorange: #D19A66FF;
+}

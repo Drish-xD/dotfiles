@@ -1,0 +1,38 @@
+#! /bin/sh
+
+# Startups
+picom &                                   # picom
+pgrep -x sxhkd > /dev/null || sxhkd &     # sxhkd
+$HOME/.config/polybar/launch.sh &         # polybar
+xsetroot -cursor_name left_ptr &          # cursor
+dunst &                                   # notification daemon
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+# wallpaper
+feh --bg-fill /usr/share/backgrounds/bspwm/wall.png
+# feh --bg-fill ${HOME}/Pictures/wall.png
+
+# No of workspaces
+bspc monitor -d 1 2 3 4 5 6
+
+# focus with pointer
+bspc config focus_follows_pointer true
+# split ratio
+bspc config split_ratio           0.52
+bspc config borderless_monocle    true
+bspc config gapless_monocle       true
+# border colors basic
+bspc config focused_border_color  '#E06C75'
+bspc config normal_border_color   '#56B6C2'
+bspc config border_width          3
+bspc config window_gap            14
+
+# bspc rules
+bspc rule -a Gimp desktop='^5' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a firefox desktop='^2'
+bspc rule -a code desktop='^3'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Galculator state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a discord state=pseudo_tiled rectangle=1200x700+0+0
