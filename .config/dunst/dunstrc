@@ -15,12 +15,12 @@ progress_bar_frame_width = 0
 progress_bar_min_width = 150
 progress_bar_max_width = 300
 
-transparency = 0
+transparency = 0.8
 separator_height = 2
 padding = 8
 horizontal_padding = 16
 frame_width = 0
-frame_color = "#565f6b"
+frame_color = "#56B6C2"
 separator_color = auto
 
 font = DaddyTimeMono Nerd Font 12
@@ -57,22 +57,22 @@ context = ctrl+shift+period
 
 [urgency_low]
 timeout = 1
-background = "#1d1d27"
-foreground = "#D9E0EE"
-highlight = "#96CDFB"
-icon = /home/saimoom/.icons/UI/notification.png
+background = "#98C379"
+foreground = "#ABB2BF"
+highlight = "#E06C75"
+icon = /home/drish/.icons/UI/notification.png
 
 [urgency_normal]
-timeout = 4
-background = "#1d1d27"
-foreground = "#D9E0EE"
-highlight = "#96CDFB"
-icon = /home/saimoom/.icons/UI/notification.png
+timeout = 2
+background = "#D19A66"
+foreground = "#ABB2BF"
+highlight = "#E06C75"
+icon = /home/drish/.icons/UI/notification.png
 
 
 [urgency_critical]
-timeout = 0
-background = "#F28FAD"
-foreground = "#1e1e27"
-highlight = "#1e1e27"
-icon = /home/saimoom/.icons/UI/notification-alert.png
+timeout = 4
+background = "#BE5046"
+foreground = "#ABB2BF"
+highlight = "#E06C75"
+icon = /home/drish/.icons/UI/notification-alert.png

@@ -3,7 +3,7 @@
 
 ROFI='rofi -theme .scripts/Rofi/themes/promptmenu.rasi'
 
-yes_text='yeah' no_text='nope' query='really?'
+yes_text='Yeah' no_text='Nope' query='Really???'
 
 if [ ${#} -eq 0 ]; then
     printf "Usage: \e[100m \e[32mpromptmenu\e[39;100m -y <command> \e[0m\n"

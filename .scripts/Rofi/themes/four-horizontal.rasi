@@ -2,30 +2,28 @@
 
 * {
   /* General */
-  text-font:                            "Hack Nerd Font 14";
-  icon-font:                            "Feather 14";
-  
-  option-6-listview-spacing:            5px;
-  menu-window-padding:                  5px 5px;
-  menu-element-padding:                 21px 23px 18px 4px;
+  text-font:                              "Hack Nerd Font 14";
+  icon-font:                              "feather 14";
+
+  menu-window-padding:                  6px;
+  menu-element-padding:                 15px 15px 15px 4px;
+  background-color:                      @base;
+  text-color:                             @text;
+  font: @icon-font;
 }
 
 #window {
-  width: 18%;
-  height: 74px;
+  width: 13%;
+  height: 70px;
   anchor: north;
   location: north;
-  x-offset: 40%;
-  y-offset: 5.8%;
-  border: 0px;
+  x-offset: 41%;
+  y-offset: 5.5%;
+  border: 2px;
   border-radius: 7px;
-  border-color: @magenta;
-}
-
-* {
-  background-color: @base;
-  text-color: @text;
-  font: @icon-font;
+  border-color: @cyan;
+  padding: @menu-window-padding;
+  children: [ inputbar, horibox ];
 }
 
 #horibox {
@@ -37,69 +35,40 @@
 }
 
 #element {
-  border: 0px;
-  padding: @option-element-padding;
-  background-color: @base;
-  border-radius: 7px;
+  border: 0;
+  border-radius: 10px;
+  padding: @menu-element-padding;
+  border-color: @base;
 }
 
 #element.selected {
-  background-color: @magenta;
+  background-color: @cyan;
   text-color: @base;
-}
-
-* {
-  font: @text-font;
-}
-
-#window {
-  padding: @menu-window-padding;
-  children: [ inputbar, horibox ];
 }
 
 #inputbar {
   enabled: false;
   children: [ textbox-prompt-colon, prompt ];
-  margin: @menu-inputbar-margin;
-}
-
-#listview {
-  spacing: @option-6-listview-spacing;
-  lines: 6;
-}
-
-#element {
-  font: @icon-font;
-  border: @menu-element-border;
-  padding: @menu-element-padding;
-  border-color: @magenta;
-}
-
-#element.selected {
-  border-color: @magenta;
-  text-color: @base;
 }
 
 element.active,
 element.selected.urgent {
-  background-color: @on;
-  text-color: @background;
-  border-color: @on;
+  background-color: @red;
+  text-color: @base;
 }
 
 element.selected.urgent {
-  background-color: @magenta;
-  border-color: @magenta;
+  background-color: @cyan;
+  border-color: @cyan;
 }
 
 element.urgent,
 element.selected.active {
   background-color: @off;
-  text-color: @background;
+  text-color: @base;
   border-color: @off;
 }
 
 element.selected.active {
-  background-color: @magenta;
-  border-color: @magenta;
+  background-color: @cyan;
 }

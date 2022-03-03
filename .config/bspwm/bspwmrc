@@ -6,7 +6,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &     # sxhkd
 $HOME/.config/polybar/launch.sh &         # polybar
 xsetroot -cursor_name left_ptr &          # cursor
 dunst &                                   # notification daemon
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
 # wallpaper
 feh --bg-fill /usr/share/backgrounds/bspwm/wall.png
 # feh --bg-fill ${HOME}/Pictures/wall.png
@@ -30,9 +30,9 @@ bspc config window_gap            14
 bspc rule -a Gimp desktop='^5' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
 bspc rule -a firefox desktop='^2'
-bspc rule -a code desktop='^3'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Galculator state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-bspc rule -a discord state=pseudo_tiled rectangle=1200x700+0+0
+bspc rule -a discord desktop='^4' state=pseudo_tiled rectangle=1200x700+0+0
+bspc rule -a cava state=pseudo_tiled rectangle=123400x700+0+0

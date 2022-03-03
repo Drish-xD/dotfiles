@@ -19,7 +19,7 @@
   y-offset: 6%;
   border: 0px;
   border-radius: 7px;
-  border-color: @magenta;
+  border-color: @cyan;
 }
 
 * {
@@ -44,7 +44,7 @@
 }
 
 #element.selected {
-  background-color: @magenta;
+  background-color: @cyan;
   text-color: @base;
 }
 
@@ -76,7 +76,7 @@
 }
 
 #element.selected {
-  border-color: @magenta;
+  border-color: @cyan;
   text-color: @base;
 }
 
@@ -88,8 +88,8 @@ element.selected.urgent {
 }
 
 element.selected.urgent {
-  background-color: @magenta;
-  border-color: @magenta;
+  background-color: @cyan;
+  border-color: @cyan;
 }
 
 element.urgent,
@@ -100,6 +100,6 @@ element.selected.active {
 }
 
 element.selected.active {
-  background-color: @magenta;
-  border-color: @magenta;
+  background-color: @cyan;
+  border-color: @cyan;
 }

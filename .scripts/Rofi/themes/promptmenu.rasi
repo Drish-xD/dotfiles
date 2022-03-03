@@ -14,19 +14,22 @@
   menu-prompt-margin:                   20px;
   menu-element-border:                  0px 10px 0px 10px;
   menu-element-padding:                 10px 20px 10px 4px;
-}
 
-#window {
-  width: 16%;
-  height: 18%;
-  location: center;
-  border: 0px;
-}
-
-* {
   background-color: @base;
   text-color: @text;
   font: @icon-font;
+  font: @text-font;
+}
+
+#window {
+  width: 20%;
+  height: 20%;
+  location: center;
+  border: 2px;
+  border-color: @cyan;
+  border-radius: 7px;
+  padding: @menu-window-padding;
+  children: [ inputbar, horibox ];
 }
 
 #horibox {
@@ -38,77 +41,45 @@
 }
 
 #element {
-  border: 0px;
   padding: @some-element-padding;
-  background-color: @base;
   border-radius: 7px;
+  border: @menu-element-border;
+  padding: @menu-element-padding;
 }
 
 #element.selected {
-  background-color: @magenta;
+  background-color: @cyan;
   text-color: @base;
-}
-
-* {
-  font: @text-font;
-  location: center;
-}
-
-#window {
-  padding: @menu-window-padding;
-  children: [ inputbar, horibox ];
 }
 
 #inputbar {
   children: [ prompt ];
-  margin: @menu-inputbar-margin;
-}
-
-#listview {
-  spacing: @option-6-listview-spacing;
-  lines: 2;
-}
-
-prompt {
-  padding: @menu-prompt-padding;
 }
 
 #prompt {
+  padding: @menu-prompt-padding;
   margin: @menu-prompt-margin;
   background-color: @base;
-  text-color: @magenta;
+  text-color: @red;
   font: @text-font-2;
-}
-
-#element {
-  font: @icon-font;
-  border: @menu-element-border;
-  padding: @menu-element-padding;
-  border-color: @base;
-}
-
-#element.selected {
-  border-color: @magenta;
 }
 
 element.active,
 element.selected.urgent {
-  background-color: @on;
+  background-color: @darkred;
   text-color: @base;
-  border-color: @on;
 }
 
 element.selected.urgent {
-  border-color: @magenta;
+  background-color: @green;
 }
 
 element.urgent,
 element.selected.active {
-  background-color: @off;
+  background-color: @darkred;
   text-color: @base;
-  border-color: @off;
 }
 
 element.selected.active {
-  border-color: @magenta;
+  background-color: @green;
 }
