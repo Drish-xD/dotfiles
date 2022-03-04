@@ -57,14 +57,14 @@ context = ctrl+shift+period
 
 [urgency_low]
 timeout = 1
-background = "#98C379"
+background = "#282C34"
 foreground = "#ABB2BF"
 highlight = "#E06C75"
 icon = /home/drish/.icons/UI/notification.png
 
 [urgency_normal]
 timeout = 2
-background = "#D19A66"
+background = "#282C34"
 foreground = "#ABB2BF"
 highlight = "#E06C75"
 icon = /home/drish/.icons/UI/notification.png
@@ -72,7 +72,7 @@ icon = /home/drish/.icons/UI/notification.png
 
 [urgency_critical]
 timeout = 4
-background = "#BE5046"
+background = "#282C34"
 foreground = "#ABB2BF"
 highlight = "#E06C75"
 icon = /home/drish/.icons/UI/notification-alert.png
