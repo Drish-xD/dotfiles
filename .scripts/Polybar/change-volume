@@ -13,16 +13,16 @@ Perc_2=$(expr $Get_Perc - 5)
 
 case ${1} in
     up)   pactl set-sink-volume 0 +5% && \
-    	  exec ${HOME}/.scripts/notify-send.sh -r 123 -t 700 -i "$HOME/.icons/UI/volume-medium.png" "Volume" " $Perc% "
+    	  exec ${HOME}/.scripts/notify/notify-send.sh -r 123 -t 700 -i "$HOME/.icons/UI/volume-medium.png" "Volume" " $Perc% "
     ;;
     down) pactl set-sink-volume 0 -5% && \
-    	  exec ${HOME}/.scripts/notify-send.sh -r 123 -t 700 -i "$HOME/.icons/UI/volume-medium.png" "Volume" " $Perc_2% " 
+    	  exec ${HOME}/.scripts/notify/notify-send.sh -r 123 -t 700 -i "$HOME/.icons/UI/volume-medium.png" "Volume" " $Perc_2% " 
     ;;
     mute) pactl set-sink-mute 0 toggle 
           if pactl get-sink-mute 0 0 | grep "yes"; then
-          exec "$HOME/.scripts/notify-send.sh" -i $HOME/.icons/UI/Music.png -r 123 -t 700 'Muted '
+          exec "$HOME/.scripts/notify/notify-send.sh" -i $HOME/.icons/UI/Music.png -r 123 -t 700 'Muted '
   	  elif pactl get-sink-mute 0 0 | grep "no"; then
-          exec "$HOME/.scripts/notify-send.sh" -i $HOME/.icons/UI/Music.png -r 123 -t 700  'alright, Unmuted'
+          exec "$HOME/.scripts/notify/notify-send.sh" -i $HOME/.icons/UI/Music.png -r 123 -t 700  'alright, Unmuted'
 
           fi
     ;;

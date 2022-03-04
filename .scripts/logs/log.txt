@@ -1,1 +1,0 @@
-/home/drish/.scripts/mpd/mpd.sh: line 30: mpc: command not found

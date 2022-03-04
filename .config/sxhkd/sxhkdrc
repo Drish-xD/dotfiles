@@ -169,21 +169,21 @@ super + e
 
 # i3 like resizing
 super + alt + Left
-    /bin/sh $HOME/.config/bspwm/resize/shrinkx.sh
+    /bin/sh $HOME/.scripts/resize/shrinkx.sh
 super + alt + Right
-    /bin/sh $HOME/.config/bspwm/resize/expandx.sh
+    /bin/sh $HOME/.scripts/resize/expandx.sh
 super + alt + Down
-    /bin/sh $HOM.config/bspwm/resize/shrinky.sh
+    /bin/sh $HOME/.scripts/resize/shrinky.sh
 super + alt + Up
-    /bin/sh $HOME/.config/bspwm/resize/expandy.sh
+    /bin/sh $HOME/.scripts/resize/expandy.sh
 
 # volumectl
 XF86Audio{RaiseVolume,LowerVolume,Mute}
-	${HOME}/.scripts/change-volume {up,down,mute}
+	${HOME}/.scripts/Polybar/change-volume {up,down,mute}
 
 # brightnessctl
 XF86MonBrightness{Down,Up}
-	${HOME}/.scripts/change-brightness {down,up}
+	${HOME}/.scripts/Polybar/change-brightness {down,up}
 
 # screenshot menu
 Print
@@ -195,7 +195,7 @@ super + F4
 
 # color picker from desktop
 super + r
-	${HOME}/.scripts/fun/color-picker.sh
+	${HOME}/.scripts/notify/color-picker.sh
 
 # Music ctl
 super + F1 
