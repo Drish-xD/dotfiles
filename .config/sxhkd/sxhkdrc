@@ -199,4 +199,4 @@ super + r
 
 # Music ctl
 super + F1 
-	${HOME}/.scripts/Rofi/mpd-menu.sh
+	${HOME}/.scripts/Rofi/player-menu.sh

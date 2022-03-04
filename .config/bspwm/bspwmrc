@@ -35,4 +35,4 @@ bspc rule -a Galculator state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a discord desktop='^4' state=pseudo_tiled rectangle=1200x700+0+0
-bspc rule -a cava state=pseudo_tiled rectangle=123400x700+0+0
+bspc rule -a cava state=pseudo_tiled rectangle= 400x225+0+0
