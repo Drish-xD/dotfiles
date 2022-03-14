@@ -8,8 +8,8 @@ xsetroot -cursor_name left_ptr &          # cursor
 dunst &                                   # notification daemon
 
 # wallpaper
-feh --bg-fill /usr/share/backgrounds/bspwm/wall.png
-# feh --bg-fill ${HOME}/Pictures/wall.png
+# feh --bg-fill /usr/share/backgrounds/bspwm/wall.png
+feh --bg-fill ${HOME}/Pictures/wall.jpg
 
 # No of workspaces
 bspc monitor -d 1 2 3 4 5 6

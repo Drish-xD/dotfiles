@@ -29,6 +29,18 @@ colors:
     cyan:    '#56b6c2'
     white:   '#ffffff'
 
+font:
+  normal:
+    family: FiraCode Nerd Font Mono
+    style: Regular
+
+  bold:
+    family: FiraCode Nerd Font Mono
+    style: Bold
+
+  italic:
+    family: FiraCode Nerd Font Mono
+    style: Italic
 
 window:
   padding:
