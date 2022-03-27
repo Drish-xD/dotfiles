@@ -181,6 +181,16 @@ super + alt + Up
 XF86Audio{RaiseVolume,LowerVolume,Mute}
 	${HOME}/.scripts/Polybar/change-volume {up,down,mute}
 
+#music control 
+XF86AudioPlay
+	playerctl play-pause -a
+
+XF86AudioNext
+	playerctl next -a
+
+XF86AudioPrev
+	playerctl previous -a
+
 # brightnessctl
 XF86MonBrightness{Down,Up}
 	${HOME}/.scripts/Polybar/change-brightness {down,up}
