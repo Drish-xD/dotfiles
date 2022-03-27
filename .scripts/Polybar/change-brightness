@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Author : owl4ce
 
 type -p brightnessctl &>/dev/null || exec "$EXNOTIFY_SEND" -u low -r 16 'Install brightnessctl!'
 

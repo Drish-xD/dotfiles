@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # credits to owl4ce!!!!
 
-ROFI='rofi -theme .scripts/Rofi/themes/promptmenu.rasi'
+ROFI='rofi -theme ~/.scripts/Rofi/themes/promptmenu.rasi'
 
 yes_text='Yeah' no_text='Nope' query='Really???'
 

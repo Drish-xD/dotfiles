@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
-mpc status &> /dev/null
+playerctl status &> /dev/null
 if test $? -eq 1
 then
-	notify-send -t 700 -u normal "mpd is not running" "starting mpd.." && mpd
+	notify-send -t 700 -u normal "Player is not running"
 	exit
 fi       
 
 
 
-status="$(mpc status | grep "playing")"
+status="$(playerctl status -a | grep "Playing")"
 
-ROFI="rofi -theme .scripts/Rofi/themes/four-horizontal.rasi"
+ROFI="rofi -theme .scripts/Rofi/themes/three-horizontal.rasi"
 
-A='' B='' C='' D='' 
+A='' B='' C='' 
 
 if  $status ; then
     B=''
@@ -21,29 +21,16 @@ else
     B=''
 fi
 
-isloop="$(mpc status | grep -o "repeat: on")"
-
-if $isloop ; then
-	LOOP_STAT="loop enabled!"
-else
-	LOOP_STAT="loop disbled!"
-fi
-
-
-MENU="$(printf "${A}\n${B}\n${C}\n${D}\n" | ${ROFI} -p "??" -dmenu -selected-row 1)"
+MENU="$(printf "${A}\n${B}\n${C}\n" | ${ROFI} -p "??" -dmenu -selected-row 1)"
 
 case "$MENU" in
-    "$A") ${HOME}/.scripts/mpd/mpd.sh prev
+    "$A") playerctl previous -a
 
     ;;
-    "$B") ${HOME}/.scripts/mpd/mpd.sh togg
+    "$B") playerctl play-pause -a
 
     ;;
-    "$C") ${HOME}/.scripts/mpd/mpd.sh next
-
-    ;;
-    "$D") $HOME/.scripts/mpd/mpd.sh loop && notify-send -t 950 "Hey!" "$LOOP_STAT"
-    ;;
+    "$C") playerctl next -a
 esac 
 
 exit ${?}

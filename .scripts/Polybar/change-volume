@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# credits to owl4ce
 
 type -p amixer &>/dev/null || exec "$EXNOTIFY_SEND" -u low -r 15 'Install alsa-utils!'
 

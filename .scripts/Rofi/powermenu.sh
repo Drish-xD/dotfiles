@@ -13,7 +13,7 @@ ROFI="rofi -theme .scripts/Rofi/themes/five-horizontal.rasi"
 
 A='' B='' C='' D='' E=''
 
-MENU="$(printf "${A}\n${B}\n${C}\n${D}\n${E}\n" | ${ROFI} -dmenu -selected-row 2)"
+MENU="$(printf "${A}\n${B}\n${C}\n${D}\n${E}\n" | ${ROFI} -dmenu -selected-row 0)"
 
 case "$MENU" in
     "$A") exec "${HOME}/.scripts/Rofi/promptmenu.sh" \
