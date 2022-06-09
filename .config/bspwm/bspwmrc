@@ -28,13 +28,7 @@ bspc config window_gap            14
 
 # bspc rules
 bspc rule -a Gimp desktop='^5' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
 bspc rule -a firefox desktop='^2'
-bspc rule -a google-chrome desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Galculator state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
 bspc rule -a discord desktop='^6' state=pseudo_tiled rectangle=1200x700+0+0
 bspc rule -a Spotify desktop='^6'
 bspc rule -a cava state=pseudo_tiled rectangle=400x225+0+0
