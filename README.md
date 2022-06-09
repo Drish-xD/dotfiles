@@ -2,7 +2,9 @@
 Dotfiles</h1>
 <br>
 
-![gallery](link_here)
+<h2 align="center">OneDark Theme</h2>
+
+![gallery](https://raw.githubusercontent.com/joshdick/onedark.vim/main/img/color_reference.png)
 
 ##
 
@@ -21,4 +23,7 @@ Dotfiles</h1>
 
 ## 🖼️ Gallery
 
-![gallery](link_here)
+![gallery](.github/Screenshot_1.png)
+![gallery](.github/Screenshot_2.png)
+![gallery](.github/Screenshot_3.png)
+![gallery](.github/Screenshot_4.png)
