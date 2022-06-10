@@ -19,7 +19,7 @@ set guioptions ""
 
 # zathurarc-dark
 
-set font "DaddyTimeMono Nerd Font 15"
+set font "JetBrains Mono Nerd Font 15"
 set default-fg 			"#56B6C2"
 set default-bg 			"#282C34"
 
