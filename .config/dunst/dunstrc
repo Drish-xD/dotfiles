@@ -1,78 +1,93 @@
 [global]
-title = Dunst
-class = Dunst
-monitor = 0
-follow = mouse
-geometry = "0x0-19+52
-offset = 14x54
-indicate_hidden = yes
-shrink = no
-format = "<span size='medium'><b>%s</b></span>\n%b"
+    ### Display ###
 
-progress_bar = true
-progress_bar_height = 5
-progress_bar_frame_width = 0
-progress_bar_min_width = 150
-progress_bar_max_width = 300
+    monitor = 0
+    follow = none
 
-transparency = 0.8
-separator_height = 2
-padding = 8
-horizontal_padding = 16
-frame_width = 0
-frame_color = "#56B6C2"
-separator_color = auto
+    
+    ### Geometry ###
+    
+    width = 300
+    height = 300
+    origin = top-right
+    offset = 10x50
+    scale = 0
+    notification_limit = 0
+    corner_radius = 15
+    
+    ### Progress bar ###
+    
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
 
-font = DaddyTimeMono Nerd Font 12
+    indicate_hidden = yes
+    transparency = 0
+    separator_height = 2
 
-line_height = 0
-markup = full
-alignment = center
-vertical_alignment = center
+    padding = 10
+    horizontal_padding = 10
+    text_icon_padding = 20
+    frame_width = 2
+    frame_color = "#ABB2BF"
+    separator_color = frame
+    sort = yes
+    idle_threshold = 120
 
-idle_threshold = 120
-show_age_threshold = 60
-sort = no
-word_wrap = yes
-ignore_newline = no
-stack_duplicates = true
-hide_duplicate_count = yes
-show_indicators = no
-sticky_history = no
-history_length = 20
-always_run_script = true
-corner_radius = 0
-icon_position = left
-max_icon_size = 48
+    
+    ### Text ###
 
-mouse_left_click = close_current
-mouse_middle_click = do_action
-mouse_right_click = close_all
+    font = FiraCode Nerd Font Mono
+    line_height = 0
+    markup = full
+    format = "<span><b>%s</b></span>\n%b"
+    alignment = left
+    show_age_threshold = 60
+    vertical_alignment = center
+    ellipsize = middle
+    word_wrap = yes
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
 
-[shortcuts]
-close = ctrl+space
-close_all = ctrl+shift+space
-history = ctrl+Escape
-context = ctrl+shift+period
+
+    ### Icons ###
+
+    icon_position = left
+    min_icon_size = 40
+    max_icon_size = 50
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    
+
+    ### Mouse ###
+ 
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
 
 [urgency_low]
-timeout = 1
-background = "#282C34"
-foreground = "#ABB2BF"
-highlight = "#E06C75"
-icon = /home/drish/.icons/UI/notification.png
+    # IMPORTANT: colors have to be defined in quotation marks.
+    # Otherwise the "#" and following would be interpreted as a comment.
+    background = "#282C34"
+    foreground = "#FFFFFF"
+    timeout = 3
+    #default_icon = ~/.icons/bell.svg
+
 
 [urgency_normal]
-timeout = 2
-background = "#282C34"
-foreground = "#ABB2BF"
-highlight = "#E06C75"
-icon = /home/drish/.icons/UI/notification.png
+    background = "#98C379"
+    foreground = "#FFFFFF"
+    timeout = 5
+    #default_icon = ~/.icons/bell.svg
 
 
 [urgency_critical]
-timeout = 4
-background = "#282C34"
-foreground = "#ABB2BF"
-highlight = "#E06C75"
-icon = /home/drish/.icons/UI/notification-alert.png
+    background = "#BE5046"
+    foreground = "#FFFFFF"
+    frame_color = "#ABB2BF"
+    timeout = 0
+    #default_icon = /path/to/icon
+
