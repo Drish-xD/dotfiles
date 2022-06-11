@@ -9,16 +9,16 @@ Get_Perc="$(pactl list sinks | grep '^[[:space:]]Volume:' | \
 
 case ${1} in
     up)   amixer set Master 5%+ && \
-    	  exec ${HOME}/.scripts/notify/notify-send.sh -r 123 -t 700 -i "$HOME/.icons/UI/volume-medium.png" "Volume" " $Get_Perc% "
+    	  exec ${HOME}/.scripts/notify/notify-send.sh -r 123 -t 700 -i "$HOME/.icons/vol-2.svg" "Volume" " $Get_Perc% "
     ;;
     down) amixer set Master 5%- && \
-    	  exec ${HOME}/.scripts/notify/notify-send.sh -r 123 -t 700 -i "$HOME/.icons/UI/volume-medium.png" "Volume" " $Get_Perc% " 
+    	  exec ${HOME}/.scripts/notify/notify-send.sh -r 123 -t 700 -i "$HOME/.icons/vol-2.svg" "Volume" " $Get_Perc% " 
     ;;
     mute) amixer set Master toggle
           if pactl get-sink-mute 0 0 | grep "yes"; then
-          exec "$HOME/.scripts/notify/notify-send.sh" -i $HOME/.icons/UI/Music.png -r 123 -t 700 'Muted '
+          exec "$HOME/.scripts/notify/notify-send.sh" -i $HOME/.icons/Vol-mute.svg -r 123 -t 700 'Muted '
   	  elif pactl get-sink-mute 0 0 | grep "no"; then
-          exec "$HOME/.scripts/notify/notify-send.sh" -i $HOME/.icons/UI/Music.png -r 123 -t 700  'Alright, Unmuted'
+          exec "$HOME/.scripts/notify/notify-send.sh" -i $HOME/.icons/vol-2.svg -r 123 -t 700  'Alright, Unmuted'
 
           fi
     ;;

@@ -7,7 +7,7 @@ BRIGHTNESS_STEPS=5
 notify()
 {
     BRIGHTNESS="$(brightnessctl i | grep -oP '\(\K[^%\)]+')"
-    exec $HOME/.scripts/notify/notify-send.sh -r 1234 -t 700 -i $HOME/.icons/UI/brightness.png "Brightness" "$BRIGHTNESS "
+    exec $HOME/.scripts/notify/notify-send.sh -r 1234 -t 700 -i $HOME/.icons/sun.svg "Brightness" "$BRIGHTNESS "
 }
 
 case ${1} in

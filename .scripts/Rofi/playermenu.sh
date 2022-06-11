@@ -3,7 +3,7 @@
 playerctl status &> /dev/null
 if test $? -eq 1
 then
-	notify-send -t 700 -u normal "Player is not running"
+	notify-send -t 700 -u normal "Player is not running" 
 	exit
 fi       
 
@@ -11,7 +11,7 @@ fi
 
 status="$(playerctl status -a | grep "Playing")"
 
-ROFI="rofi -theme .scripts/Rofi/themes/three-horizontal.rasi"
+ROFI="rofi -theme .scripts/Rofi/themes/player.rasi"
 
 A='' B='' C='' 
 

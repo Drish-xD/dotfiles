@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # credits to owl4ce!!!!
 
-ROFI='rofi -theme ~/.scripts/Rofi/themes/promptmenu.rasi'
+ROFI='rofi -theme ~/.scripts/Rofi/themes/prompt.rasi'
 
-yes_text='Yeah' no_text='Nope' query='Really???'
+yes_text='' no_text='' query='Are You Sure???'
 
 if [ ${#} -eq 0 ]; then
     printf "Usage: \e[100m \e[32mpromptmenu\e[39;100m -y <command> \e[0m\n"

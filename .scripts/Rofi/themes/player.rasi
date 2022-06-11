@@ -1,0 +1,67 @@
+@import "colors.rasi"
+
+configuration {
+	font:							              "JetBrainsMono Nerd Font Mono 14";
+  show-icons:                     false;
+  drun-display-format:            "{name}";
+  disable-history:                false;
+	sidebar-mode: 					        false;
+}
+
+* {
+  background-color:               @base;
+  text-color:                     @text;
+}
+
+window {
+  transparency:                   "real";
+  border-radius:                  0px;
+  location:                       northeast;
+	width:            							200px;
+  x-offset:                       -15px;
+  y-offset:                       45px;
+}
+
+mainbox {
+  background-color:               @base;
+  children:                       [ textbox-prompt-colon, listview ];
+  padding:                        15px 20px;
+}
+
+textbox-prompt-colon {
+	font:							             "JetBrainsMono Nerd Font Mono Bold 12";
+	expand: 						           false;
+	str: 							             "Music";
+  padding:                       0 0 10px;
+}
+
+listview {
+  background-color:               @base;
+  cycle:                          true;
+  dynamic:                        true;
+  layout:                         horizontal;
+  spacing:                        9px;
+}
+
+element {
+  orientation:                    horizontal;
+  border-radius:                  5px;
+}
+
+element-text {
+  background-color: 	  			    inherit;
+  text-color:         				    inherit;
+	font:               						"feather 17";
+  expand:                         true;
+  padding:                        6px 12px 5px;
+}
+
+element normal.active {
+    background-color:               @base;
+    text-color:                     @text;
+}
+
+element selected {
+    background-color:               @cyan;
+    text-color:                     @base;
+}

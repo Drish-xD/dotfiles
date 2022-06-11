@@ -1,0 +1,83 @@
+@import "colors.rasi"
+
+configuration {
+	font:							              "JetBrainsMono Nerd Font Mono 14";
+  show-icons:                     false;
+  drun-display-format:            "{name}";
+  disable-history:                false;
+	sidebar-mode: 					        false;
+}
+
+* {
+  background-color:               @base;
+  text-color:                     @text;
+}
+
+window {
+  transparency:                   "real";
+  border:              						2px;
+  border-color: 			        		@cyan;
+  border-radius: 					        10px;
+  location:                       northeast;
+	width:            							300px;
+  x-offset:                       -15px;
+  y-offset:                       45px;
+}
+
+mainbox {
+  background-color:               @base;
+  children:                       [inputbar, listview ];
+  padding:                        15px 20px;
+}
+
+inputbar {
+  enabled:                        true;
+  children:                       [textbox-prompt-colon, prompt];
+  margin:                         0 0 10px;
+}
+
+textbox-prompt-colon {
+	font:							             "JetBrainsMono Nerd Font Mono Bold 12";
+	expand: 						           false;
+	str: 							             "PowerMenu | ";
+}
+
+
+prompt {
+  padding:                        2px 6px;
+  border-radius:                  5px;
+  background-color:               @cyan;
+  text-color:                     @base;
+	font:							              "JetBrainsMono Nerd Font Mono Bold 12";
+}
+
+listview {
+  background-color:               @base;
+  cycle:                          true;
+  dynamic:                        true;
+  layout:                         horizontal;
+  spacing:                        5px;
+}
+
+element {
+  orientation:                    horizontal;
+  border-radius:                  5px;
+}
+
+element-text {
+  background-color: 	  			    inherit;
+  text-color:         				    inherit;
+	font:               						"feather 17";
+  expand:                         true;
+  padding:                        6px 12px 5px;
+}
+
+element normal.active {
+    background-color:               @base;
+    text-color:                     @text;
+}
+
+element selected {
+    background-color:               @cyan;
+    text-color:                     @base;
+}

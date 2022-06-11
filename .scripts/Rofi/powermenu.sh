@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+# #!/usr/bin/env bash
 
 # Determine `systemd-logind` or `(e)logind`.
 if [ -x "$(command -v systemctl)" ]; then
@@ -9,21 +9,17 @@ else
     echo "failed"
 fi
 
-ROFI="rofi -theme .scripts/Rofi/themes/five-horizontal.rasi"
+uptime=$(uptime -p | sed 's/up //' | sed 's/\ years\?,/y/' | sed 's/\ weeks\?,/w/' | sed 's/\ days\?,/d/' | sed 's/\ hours\?,\?/h/' | sed 's/\ minutes\?/m/')
+ROFI="rofi -theme ~/.scripts/Rofi/themes/power.rasi" 
 
 A='' B='' C='' D='' E=''
 
-MENU="$(printf "${A}\n${B}\n${C}\n${D}\n${E}\n" | ${ROFI} -dmenu -selected-row 0)"
+MENU="$(printf "${A}\n${B}\n${C}\n${D}\n${E}\n" | ${ROFI} -dmenu -p "Up - $uptime" -selected-row 0)"
 
 case "$MENU" in
-    "$A") exec "${HOME}/.scripts/Rofi/promptmenu.sh" \
-              --yes-command "${SEATCTL} poweroff"  \
-              -q ' poweroff?'
-
+    "$A") exec "${HOME}/.scripts/Rofi/promptmenu.sh" --yes-command "${SEATCTL} poweroff" -q 'ShutDown?'
     ;;
-    "$B") exec "${HOME}/.scripts/Rofi/promptmenu.sh" \
-              --yes-command "${SEATCTL} reboot"    \
-              --query '  reboot?'
+    "$B") exec "${HOME}/.scripts/Rofi/promptmenu.sh" --yes-command "${SEATCTL} reboot" -q 'Reboot?'
     ;;
     "$C") betterlockscreen -l
     ;;
@@ -32,9 +28,7 @@ case "$MENU" in
           fi
           exec "$SEATCTL" suspend
     ;;
-    "$E") exec "${HOME}/.scripts/Rofi/promptmenu.sh"               \
-              --yes-command "pkill -KILL -u $(id -nu || whoami)" \
-              -q '  Logout?'
+    "$E") exec "${HOME}/.scripts/Rofi/promptmenu.sh" --yes-command "pkill -KILL -u $(id -nu || whoami)" -q 'Logout?'
     ;;
 esac 
 
