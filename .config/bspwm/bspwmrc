@@ -12,7 +12,7 @@ dunst &                                   # notification daemon
 feh --bg-fill ${HOME}/Pictures/wall.jpg
 
 # No of workspaces
-bspc monitor -d 1 2 3 4 5 6
+bspc monitor -d 1 2 3 4 5
 
 # focus with pointer
 bspc config focus_follows_pointer true
