@@ -1,6 +1,159 @@
-/** Basic config file **/
+@import "colors.rasi"
 
 configuration {
-  show-icons:         true;
-  icon-theme:         "OneDark";
+    font: 							"FiraCode Nerd Font Mono 12";
+    fixed-num-lines: 				true;
+    show-icons: 					true;
+    sidebar-mode: 					true;
+    scroll-method: 					0;
+    window-format: 					"[{w}] ··· {c} ···   {t}";
+    click-to-exit: 					true;
+    combi-hide-mode-prefix:         false;
+    display-window: 				"";
+    display-windowcd: 			    "";
+    display-run: 					"";
+    display-ssh: 					"";
+    display-drun: 					"";
+    display-combi: 					"";
+}
+
+
+* {
+    background-color:               @base;
+    text-color: 					@text;
+}
+
+window {
+    border: 						2px;
+    border-color: 					@cyan;
+    border-radius: 					20px;
+    padding: 						0;
+    width: 							40%;
+}
+
+prompt {
+    font:                           "Feather 15";
+    text-color: 					@text;
+}
+
+textbox-prompt-colon {
+    expand: 						false;
+    str: 							" ";
+    margin:							0 4px 0 0;
+    text-color: 					inherit;
+}
+
+entry {
+    spacing:    					0;
+    text-color: 					@text;
+}
+
+case-indicator {
+    spacing:    					0;
+    text-color: 				    @text;
+}
+
+inputbar {
+    spacing:    					 0;
+    text-color: 					 @text;
+    padding:    					 5px;
+    children: 						 [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+mainbox {
+    padding: 						 15px;
+}
+
+listview {
+    lines:							 6;
+    columns:						 1;
+    fixed-height: 					 0;
+    border: 						 0;
+    border-color: 					 @cyan;
+    spacing: 						 4px;
+    scrollbar: 						 true;
+    padding: 						 20px 5px;
+}
+
+element-text, element-icon {
+    padding:                10px;
+    background-color:       #00000000;
+    text-color:             inherit;
+}
+
+element {
+    border-radius: 					 100%;
+    padding: 						 5px;
+}
+
+element normal.normal {
+    background-color: 			@base;
+    text-color:       			@text;
+}
+element normal.urgent {
+    background-color: 			@base;
+    text-color:       			@red;
+}
+element normal.active {
+    background-color: 			@green;
+    text-color:       			@base;
+}
+element selected.normal {
+    background-color: 			@cyan;
+    text-color:       			@base;
+}
+element selected.urgent {
+    background-color: 			@base;
+    text-color:       			@red;
+}
+element selected.active {
+    background-color: 			@text;
+    text-color:       			@base;
+}
+element alternate.normal {
+    background-color: 			@base;
+    text-color:       			@text;
+}
+element alternate.urgent {
+    background-color: 			@base;
+    text-color:       			@text;
+}
+element alternate.active {
+    background-color: 			@base;
+    text-color:       			@text;
+}
+
+
+button {
+    horizontal-align:       0.5;
+    vertical-align:         0.5;
+    background-color:       @base;
+    margin: 						    5px;
+    padding: 						    3px;
+    text-color: 					  @cyan;
+    border: 					  	  2px;
+    border-radius: 					100%;
+    border-color: 					@text;
+}
+
+button selected {
+    background-color:       @cyan;
+    text-color: 					  @base;
+    border-radius: 					100%;
+    border-color: 					@cyan;
+}
+
+scrollbar {
+    width:        					4px;
+    handle-color: 					@cyan;
+    handle-width: 					8px;
+}
+
+message {
+    border-color: 					@cyan;
+    padding: 						    1px;
+}
+
+textbox {
+    text-color: 					  @text;
 }
