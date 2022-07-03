@@ -9,7 +9,7 @@ dunst &                                   # notification daemon
 
 # wallpaper
 # feh --bg-fill /usr/share/backgrounds/bspwm/wall.png
-feh --bg-fill ${HOME}/Pictures/wall.jpg
+feh --bg-fill ${HOME}/Pictures/aot.png
 
 # No of workspaces
 bspc monitor -d 1 2 3 4 5
@@ -21,10 +21,10 @@ bspc config split_ratio           0.52
 bspc config borderless_monocle    true
 bspc config gapless_monocle       true
 # border colors basic
-bspc config focused_border_color  '#E06C75'
-bspc config normal_border_color   '#56B6C2'
+bspc config focused_border_color  '#ABB2BF'
+bspc config normal_border_color   '#282C34'
 bspc config border_width          3
-bspc config window_gap            14
+bspc config window_gap            15
 
 # bspc rules
 bspc rule -a Gimp desktop='^5' state=floating follow=on
